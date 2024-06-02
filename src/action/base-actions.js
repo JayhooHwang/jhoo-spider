@@ -38,12 +38,3 @@ export default [{
         return str.replace(serachRgx, "");
     }
 }]
-
-
-// actionManager.register('remove', (str, target)=>{
-//     if(!target || !target.length){
-//         throw new Error("Action [remove] 必须传递 1 个参数")
-//     }
-//     const serachRgx = new RegExp(target, 'g');
-//     return str.replace(serachRgx, "");
-// })

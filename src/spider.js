@@ -13,7 +13,7 @@ const attrAliasOptions = {
  * @property {string} root
  */
 
-export class Spider{
+export class Spider {
     /** @private */
     _targetDom = document.body;
     /** @private */
@@ -37,7 +37,7 @@ export class Spider{
         this._context = context;
         this._groupKeys = groupKeys;
         this._actionManager = new ActionManager();
-        this._actionManager.batchRegister(baseActions);
+        this._actionManager.register(baseActions);
         this._actionRunner = new ActionRunner(this._actionManager);
     }
     search(map){
@@ -58,6 +58,10 @@ export class Spider{
         }catch(ex){
             throw new SpiderError(ex.message, ex, current);
         }
+    }
+
+    get actions(){
+        return this._actionManager;
     }
 
     /**

@@ -2,11 +2,13 @@
   "name": "jhoo-spider",
   "version": "1.0.0",
   "description": "",
+  "main": "dist/jhoo-spider.js",
+  "module": "src/index.js",
   "scripts": {
     "build": "webpack"
   },
   "keywords": [],
-  "author": "JayhooHwang",
+  "author": "Jayhoo",
   "license": "MIT",
   "devDependencies": {
     "webpack": "^5.91.0",
